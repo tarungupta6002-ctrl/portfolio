@@ -2,7 +2,7 @@
 
 A modern, high-performance developer portfolio built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, **GSAP**, and **Lenis Smooth Scroll**.
 
-🌐 **Live Website:** [https://portfolio-kappa-bay-44.vercel.app](https://portfolio-kappa-bay-44.vercel.app)
+🌐 **Live Website:** [https://www.tarungupta.me](https://www.tarungupta.me)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black?style=flat&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)

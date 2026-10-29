@@ -17,8 +17,17 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tarungupta.me"),
   title: "Tarun Gupta | Full Stack Developer",
-  description: "Tarun Gupta's portfolio - Full Stack Developer",
+  description: "Tarun Gupta's portfolio — Full Stack Developer building robust web and real-time communication platforms.",
+  openGraph: {
+    title: "Tarun Gupta | Full Stack Developer",
+    description: "Tarun Gupta's portfolio — Full Stack Developer building robust web and real-time communication platforms.",
+    url: "https://www.tarungupta.me",
+    siteName: "Tarun Gupta Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

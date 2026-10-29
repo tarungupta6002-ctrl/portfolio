@@ -70,31 +70,31 @@ export const HeroSection = () => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
           {/* Avatar / Profile Photo with Glow */}
-          <div className="flex flex-col items-center mb-6">
+          <div className="flex flex-col items-center mb-3">
             <div className="relative group">
               {/* Outer ambient glow */}
               <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-400 opacity-70 blur-lg group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
 
               {/* Avatar circle */}
-              <div className="relative size-28 sm:size-32 md:size-36 rounded-full overflow-hidden border-2 border-emerald-400/50 bg-gray-900 shadow-2xl ring-4 ring-black/50">
+              <div className="relative size-24 sm:size-28 md:size-32 rounded-full overflow-hidden border-2 border-emerald-400/50 bg-gray-900 shadow-2xl ring-4 ring-black/50">
                 <Image
                   src={tarunPhoto}
                   alt={personal.name}
                   fill
                   priority
                   className="object-cover object-[center_18%] transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+                  sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                 />
               </div>
 
               {/* Online pulse indicator */}
-              <div className="absolute bottom-1 right-1 size-6 rounded-full bg-gray-950 border-2 border-gray-900 flex items-center justify-center shadow-lg">
-                <span className="size-3.5 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="absolute bottom-1 right-1 size-5 sm:size-6 rounded-full bg-gray-950 border-2 border-gray-900 flex items-center justify-center shadow-lg">
+                <span className="size-2.5 sm:size-3.5 rounded-full bg-emerald-400 animate-pulse" />
               </div>
             </div>
 
             {/* Availability Pill */}
-            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 backdrop-blur-md text-xs font-medium text-white/90 shadow-inner">
+            <div className="mt-2.5 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 backdrop-blur-md text-xs font-medium text-white/90 shadow-inner">
               <span className="relative flex size-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full size-2 bg-emerald-500"></span>
@@ -103,21 +103,21 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight">
             {personal.name}
           </h1>
 
-          <h2 className="mt-2 text-xl md:text-2xl text-emerald-400 font-medium">
+          <h2 className="mt-1 text-lg md:text-xl text-emerald-400 font-medium">
             {personal.role}
           </h2>
 
-          <p className="mt-4 text-white/60 text-base md:text-lg max-w-xl mx-auto">
+          <p className="mt-2 text-white/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             {personal.tagline}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-8 gap-3 relative z-10">
+      <div className="flex flex-col items-center justify-center mt-5 gap-3 relative z-10">
         <div className="flex items-center justify-center gap-4">
           <CoolBeansButton label="projects" href="#projects" />
           <CoolBeansButton
@@ -128,13 +128,13 @@ export const HeroSection = () => {
         </div>
 
         {resumeNotice && (
-          <div className="mt-3 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs animate-pulse">
+          <div className="mt-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs animate-pulse">
             📄 Resume is currently being updated with latest full-stack projects!
           </div>
         )}
       </div>
 
-      <div className="mt-10 flex items-center justify-center relative z-10">
+      <div className="mt-5 flex items-center justify-center relative z-10">
         <SocialLinks />
       </div>
     </div>

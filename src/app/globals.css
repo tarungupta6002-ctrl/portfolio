@@ -45,18 +45,21 @@ body {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  padding-block: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding-block: 11rem;
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero {
-    padding-block: 14rem;
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
   }
 }
 

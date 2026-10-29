@@ -76,14 +76,14 @@ export const HeroSection = () => {
               <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-400 opacity-70 blur-lg group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
 
               {/* Avatar circle */}
-              <div className="relative size-24 sm:size-28 md:size-32 rounded-full overflow-hidden border-2 border-emerald-400/50 bg-gray-900 shadow-2xl ring-4 ring-black/50">
+              <div className="relative size-28 sm:size-32 rounded-full overflow-hidden border-2 border-emerald-400/50 bg-gray-900 shadow-2xl ring-4 ring-black/50">
                 <Image
                   src={tarunPhoto}
                   alt={personal.name}
                   fill
                   priority
                   className="object-cover object-[center_18%] transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                  sizes="(max-width: 640px) 112px, 128px"
                 />
               </div>
 

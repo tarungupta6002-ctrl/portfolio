@@ -1,9 +1,8 @@
 import Image from "next/image";
-import ArrowRightUp from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import Github from "@/assets/icons/github.svg";
 import chathubImg from "@/assets/images/chathub.png";
-import { Download, Sparkles } from "lucide-react";
+import { ArrowUpRight, Download, Sparkles } from "lucide-react";
 
 const portfolioProjects = [
   {
@@ -105,22 +104,20 @@ export const ProjectsSection = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1"
+                      className="flex-1 bg-white hover:bg-emerald-400 text-gray-950 hover:text-gray-950 transition-all duration-300 ease-in-out h-11 px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm shadow-md group cursor-pointer"
                     >
-                      <button className="bg-white hover:bg-emerald-400 hover:text-gray-950 transition-all duration-300 ease-in-out text-gray-950 h-11 w-full px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm shadow-md">
-                        Live Demo <ArrowRightUp className="size-4" />
-                      </button>
+                      <span>Live Demo</span>
+                      <ArrowUpRight className="size-4.5 shrink-0 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </a>
 
                     <a
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1"
+                      className="flex-1 bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all duration-300 ease-in-out h-11 px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm backdrop-blur-sm group cursor-pointer"
                     >
-                      <button className="bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all duration-300 ease-in-out h-11 w-full px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm backdrop-blur-sm">
-                        GitHub <Github className="size-4" />
-                      </button>
+                      <span>GitHub</span>
+                      <Github className="size-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
                     </a>
 
                     {project.apk && (
@@ -128,11 +125,10 @@ export const ProjectsSection = () => {
                         href={project.apk}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1"
+                        className="flex-1 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 hover:text-emerald-200 transition-all duration-300 ease-in-out h-11 px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm group cursor-pointer"
                       >
-                        <button className="bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 hover:text-emerald-200 transition-all duration-300 ease-in-out h-11 w-full px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 text-sm">
-                          Android APK <Download className="size-4" />
-                        </button>
+                        <span>Android APK</span>
+                        <Download className="size-4 shrink-0 transition-transform duration-300 group-hover:translate-y-0.5" />
                       </a>
                     )}
                   </div>

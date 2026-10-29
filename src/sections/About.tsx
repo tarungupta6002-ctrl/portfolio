@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
+import tarunPhoto from "@/assets/images/tarun.jpg";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,7 +15,6 @@ import {
   SiReact,
   SiNextdotjs,
   SiTypescript,
-  SiNodedotjs,
   SiMongodb,
   SiTailwindcss,
   SiPostgresql,
@@ -97,7 +98,7 @@ export default function AboutSection() {
           duration: 0.8,
           ease: "back.out(1.4)",
           scrollTrigger: {
-            trigger: ".highlights-grid",
+            trigger: cardsRef.current,
             start: "top 85%",
           },
         }
@@ -138,9 +139,47 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-5 gap-8 items-start">
           {/* Left column — Cards */}
           <div ref={cardsRef} className="lg:col-span-2 flex flex-col gap-5">
+            {/* Dedicated Profile Card */}
+            <div className="highlight-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-4 transition-all duration-500 hover:border-emerald-400/30 hover:bg-white/[0.07]">
+              <div
+                className="absolute inset-0 -z-10 opacity-5"
+                style={{
+                  backgroundImage: `url(${grainImage.src})`,
+                }}
+              />
+              <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden border border-white/10 bg-gray-950">
+                <Image
+                  src={tarunPhoto}
+                  alt={personal.name}
+                  fill
+                  className="object-cover object-[center_18%] transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/25 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-medium text-emerald-300 flex items-center gap-1.5 shadow-md">
+                    <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    India 🇮🇳
+                  </span>
+                  <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-medium text-white/80 shadow-md">
+                    Full Stack Dev
+                  </span>
+                </div>
+              </div>
+              <div className="pt-3 px-1">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white font-semibold text-lg">{personal.name}</h3>
+                  <span className="text-xs text-emerald-400 font-mono">@tarungupta6002</span>
+                </div>
+                <p className="text-white/50 text-xs mt-1 leading-relaxed">
+                  Building high-performance web apps with modern technologies & AI-augmented velocity.
+                </p>
+              </div>
+            </div>
+
             {/* Highlight cards */}
             <div className="highlights-grid flex flex-col gap-4">
               {highlights.map((item) => (

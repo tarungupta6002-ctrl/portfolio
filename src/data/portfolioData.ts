@@ -43,6 +43,7 @@ export const portfolioData = {
     statusBadge: "Open to Work",
     locationBadge: "Remote Ready",
     resumeUrl: "#",
+    avatar: "/tarun.jpg",
     web3formsKey: "dd6f7148-6e8b-4a64-97e1-f7fe059d6203",
     aboutBio:
       "I'm a Full-Stack Developer passionate about building robust, high-performance web applications using React, Next.js, TypeScript, Node.js, and modern databases. I leverage AI-augmented engineering workflows to prototype rapidly, scaffold architectures, and write well-tested code without compromising core CS fundamentals. From architecting sub-50ms WebSockets and client-side AES-GCM encryption in ChatHub to deploying cloud CI/CD pipelines, I bring deep curiosity and high execution velocity to every project I build.",
